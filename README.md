@@ -6,6 +6,7 @@ INTRODUCTION
 We know that drug delivery is crucial in the medical domain, where many scientists and researchers aim to identify the latest therapies that support the treatment of illness. However, the traditional methods of drug discovery are time-consuming, expensive, and require significant human power. Therefore, machine learning technology plays an important role in the medical field too. Machine learning allows researchers and scientists to analyze vast amounts of chemical and biological data quickly and accurately. It can forecast the likelihood of a compound exhibiting biological activity, suggesting its potential effectiveness as a drug. This paper explores how machine learning can be used in the process of a comprehensive strategy for drug discovery, with a certain focus on predicting the bioactivity (pIC50 values) of compounds that inhibit acetylcholinesterase, which is an enzyme associated with neurodegenerative disorders.  In this paper, acetylcholinesterase is the target in the treatment of Alzheimer’s disease.
 
 DATASETS
+
 -“acetylcholinesterase_01_bioactivity_data_raw.csv” is used to for the starting point for data curation. This dataset contains raw bioactivity records from the chEMBL database which includes SMILES strings and IC50 values.
  
 - “acetylcholinesterase_03_bioactivity_data_curated.csv”  is the curated dataset where it comes from cleaning and filtering the raw data. The missing and the ambiguous bioactivity values were removed from the data. This data is used for exploratory data analysis and for better visualizations.
@@ -13,6 +14,7 @@ DATASETS
 - “acetylcholinesterase_06_bioactivity_data_3class_pIC50_pubchem_fp.csv” is the final dataset which is used for training machine learning models. This dataset contains transformed Ic50 to pIC50 values and molecular fingerprints which is in PubChem format. This datasey is used for a focus on training a random forest regressor and to build and evaluate regression models compared various regression models.
 
 DATA PREPROCESSING
+
 Firstly smiles strings were converted into molecular structures by using RDkit. IC50 values were transformed by using logarithmic scales to reduce the skewness and to remove noisy data.
 To remove low information features, we implemented a variance threshold filter.
 
@@ -86,9 +88,13 @@ Our study affirms that machine learning, particularly ensemble techniques, offer
  
 In conclusion, this work demonstrates that machine learning not only expedites the drug discovery process but also enhances the precision and cost-efficiency of identifying viable therapeutic agents, thereby supporting the advancement of treatments for neurodegenerative conditions like Alzheimer’s disease.
 References
+
  
 [1] ChEMBL Database. [https://www.ebi.ac.uk/chembl/](https://www.ebi.ac.uk/chembl/)
+
 [2] RDKit: Open-source cheminformatics. [http://www.rdkit.org](http://www.rdkit.org)
+
 [3] Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5–32.
+
 [4] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD, 785–794
  
