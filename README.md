@@ -17,9 +17,13 @@ Firstly smiles strings were converted into molecular structures by using RDkit. 
 To remove low information features, we implemented a variance threshold filter.
 
 METHODOLOGY
+
 -There are 3 parts to this project. First, we gathered the data for the data preprocessing and later we have done exploratory data analysis. After EDA we built and evaluated different scores of respective models such as random forest, support vector machine, linear regression, XGBoost, K-nearest neighbors. And in the last part we compared the respective results for respective models based on accuracy, time taken and errors such as r-squared and root mean squared errors.
+
 -We made an exploratory data analysis  on the curated data set for the better understanding of data distribution and to identify patterns. IC50 values were found to be right-skewed which leads to their transformation into pIC50 values by using the pIc50 = -log10(IC50 * 10-9). For the data visulalization we designed some count plots for two classed such as active and inactive, scatter plots for molecular weight and LogP(pIc5o values), box plots for pIC50 and bioactivity classes, and box plots for molecular weights and bioactivity classes etc.
+
 -Now we used “acetylcholinesterase_06_bioactivity_data_3class_pIC50_pubchem_fp.csv” data to build different models such as random forest, support vector machine, linear regression, XGBoost, K-nearest neighbors. After removing low variance features, first partition of the data has been implemented with a ratio of 80/20. 80 percent of the data is for training and the remaining 20 percent is for testing. Now we built random forest, support vector machine, linear regression, XGBoost, K-nearest neighbors models on the data. Later we have got a linearity on experimental pIC50 and predicted pIC50 and made a better visualization by making a scatter plot.
+
 -Based on the “acetylcholinesterase_06_bioactivity_data_3class_pIC50_pubchem_fp.csv” data, In the last part We made a comparative model analysis by evaluating performance of several regression algorithms. All models were trained and evaluated using the train-test-split partition and the evaluation metrics such as R-squared, and RMSE were used for effective evaluation and bar plots were designed for comparison of models. conclusion and future work
  
 RESULTS
